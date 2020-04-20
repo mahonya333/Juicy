@@ -1,10 +1,10 @@
-html{
+html {
     box-sizing: border-box;
     font-size: 62.5%;
 }
 *,
 *::before,
-*::after{
+*::after {
     box-sizing: inherit;
 }
 body {
@@ -12,10 +12,8 @@ body {
     min-width: $min-width;
     margin: 0;
     padding: 0;
-
-    font-family: $Rub-regular;/* Подключаем по ситуации шрифт с дизайна */
-/*     color: $color-main; */ /* Подключаем по ситуации основной цвет с дизайна */
-    background-color: $color-black;
+    font-family: $Montserrat-Regular; /* Подключаем по ситуации шрифт с дизайна */
+    /*     color: $color-main; */ /* Подключаем по ситуации основной цвет с дизайна */
 }
 body {
     line-height: 1.5;
@@ -40,7 +38,16 @@ textarea {
 ul {
     @include list-reset;
 }
-
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
+}
 input[placeholder] {
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -84,15 +91,12 @@ input[placeholder] {
     margin-right: auto;
     width: 100%;
     max-width: $container-width;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
     @include breakpoint($tablet-width) {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
     }
 
     @include breakpoint($mobile-width) {
-   
     }
 }
 
@@ -110,7 +114,7 @@ input[placeholder] {
 .site-wrapper {
     display: flex;
     flex-direction: column;
-/*     font-family: $pn-regular; */  /* Подключаем по ситуации шрифт с дизайна */
+    font-family: $Montserrat-Regular;
     font-size: 1.6rem;
     min-height: 100vh;
 }
@@ -130,4 +134,9 @@ input[placeholder] {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+}
+.title {
+    font-family: $Montserrat-Black;
+    font-size: 4.8rem;
+    color: $color-main;
 }
